@@ -24,14 +24,14 @@
         <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
-                    <p class="mil-h3 mil-muted mil-thin">Pioneering</p>
-                    <p class="mil-h3 mil-muted">Creative</p>
-                    <p class="mil-h3 mil-muted mil-thin">Excellence</p>
+                    <p class="mil-h3 mil-muted mil-thin">Salom</p>
+                    <p class="mil-h3 mil-muted">Xush kelibsiz</p>
+                    <p class="mil-h3 mil-muted mil-thin">Portfolioga</p>
                 </div>
                 <div class="mil-pos-abs mil-animation-2">
                     <div class="mil-reveal-frame">
                         <p class="mil-reveal-box"></p>
-                        <p class="mil-h3 mil-muted mil-thin">ashley.com</p>
+                        <p class="mil-h3 mil-muted mil-thin">Maxmudovv</p>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
         <div class="mil-menu-frame">
             <!-- frame clone -->
             <div class="mil-frame-top">
-                <a href="home-1.html" class="mil-logo">A.</a>
+                <a href="home-1.html" class="mil-logo">M.</a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -250,7 +250,7 @@
 
                                     <ul class="mil-category-list">
                                         {% for category in categories %}
-                                        <li><a href="?category={{category.id}}">{{category.name}}</a></li>
+                                        <li><a href="?category={{.id}}">{{category.name}}</a></li>
                                         {% endfor %}
                                         <li><a href="#" class="mil-active">All categories</a></li>
                                         
@@ -271,7 +271,7 @@
                                             <div class="mil-label mil-upper">{{blog.created_date}}</div>
                                             <div class="mil-label mil-upper">👁️‍🗨️ {{blog.hit_count.hits}}</div>
                                         </div>
-                                        <h4 class="mil-up mil-mb-30">{{blog.title |truncatewords:4}}</h4>
+                                        <h4 class="mil-up mil-mb-30">{{ blog.title | safe | truncatewords:20 }}</h4>
                                         <p{{blog.content | safe | truncatewords:20 }}></p>
                                         
                                     </div>
